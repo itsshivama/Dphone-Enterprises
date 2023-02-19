@@ -1,17 +1,13 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Portfolio Details - Day Bootstrap Template</title>
+  <title>Dphone Enterprises</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
-
-  <!-- Favicons -->
-  <link href="/img/favicon.png" rel="icon">
-  <link href="/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -23,9 +19,11 @@
   <link href="/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
   <link href="/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  
 
   <!-- Template Main CSS File -->
   <link href="/css/style.css" rel="stylesheet">
+  <link href="/css/referral.css"  rel="stylesheet">
 </head>
 
 <body>
@@ -52,13 +50,23 @@
 
       <h1 class="logo"><a href="index.html">Dphone Enterprises</a></h1>
       <!-- Kept it here if we may want to switch to an image logo from the text Logo -->
-      <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      <!-- <a href="index.html" class="logo"><img src="/img/logo.png" alt="" class="img-fluid"></a>-->
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto" href="index.html">Home</a></li>
-          <li><a class="nav-link scrollto active" href="#hero">Product Details</a></li>
-          <li><a class="nav-link scrollto" href="">Login</a></li>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <li><a class="nav-link scrollto" href="#team">Team</a></li>
+          <li><a class="nav-link scrollto" href="#team">Referral</a></li>
+          <li>
+            <div class="dropdown">
+                <a class=" dropdown-toggle" id="menu1" data-toggle="dropdown">Username  <box-icon class="mx-4" type='solid' name='user'></box-icon></a>
+                <ul class="dropdown-menu">
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="">Edit </a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="">Logout</a></li>
+                </ul>
+            </div>
+          </li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -66,73 +74,61 @@
     </div>
   </header><!-- End Header -->
 
-  <main id="main">
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+    <div class="container position-relative" data-aos="fade-up" data-aos-delay="500"  style="margin-left: 20px;">
 
-    <!-- ======= Breadcrumbs ======= -->
-    <section id="breadcrumbs" class="breadcrumbs">
-      <div class="container">
+    <!-- ======= Referral Section ======= --> 
+      <div class="row">
+        <div class="col-lg-7 mx-auto">
+            <div id="table" class="card border-0 shadow">
+                <div  class="card-body p-5">
+                    <!-- Responsive table -->
+                    <div  class="table-responsive">
+                        <table class="table m-0">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Product Name</th>
+                                    <th scope="col">Purchasae Date</th>
+                                    <th scope="col">Handle</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>Mark</td>
+                                    <td>dddddd</td>
+                                    <td>@mdo</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>Jacob</td>
+                                    <td>dddddd</td>
+                                    <td>@fat</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td>Larry</td>
+                                    <td>dddddd</td>
+                                    <td>@twitter</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">4</th>
+                                    <td>Martin</td>
+                                    <td>dddddd</td>
+                                    <td>@Marty</td>
+                                </tr>
+                            </tbody>
+                        </table>
 
-        <ol>
-          <li><a href="index.html">Home</a></li>
-          <li>Product Details</li>
-        </ol>
-        <h2>Product Details</h2>
-
-      </div>
-    </section><!-- End Breadcrumbs -->
-
-    <!-- ======= Portfolio Details Section ======= -->
-    <section id="portfolio-details" class="portfolio-details">
-      <div class="container">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-8">
-            <div class="portfolio-details-slider swiper">
-              <div class="swiper-wrapper align-items-center">
-
-                <div class="swiper-slide">
-                  <img src="/img/portfolio/portfolio-8.jpg" alt="">
+                    </div>
                 </div>
-
-                <div class="swiper-slide">
-                  <img src="/img/portfolio/portfolio-3.jpg" alt="">
-                </div>
-
-                <div class="swiper-slide">
-                  <img src="/img/portfolio/portfolio-4.jpg" alt="">
-                </div>
-
-              </div>
-              <div class="swiper-pagination"></div>
             </div>
-          </div>
-
-          <div class="col-lg-4">
-            <div class="portfolio-info">
-              <h3>Project information</h3>
-              <ul>
-                <li><strong>Category</strong>: Mobile Device</li>
-                <li><strong>Client</strong>: DPhone Enterprises</li>
-                <li><strong>Launch Date</strong>: 01 Feburary, 2023</li>
-              </ul>
-            </div>
-            <div class="portfolio-description">
-              <p class="h4">This is Product detail</p>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, minus.
-              </p>
-              <p class="fw-bolder h5">Price: RS 10000</p>
-              <button type="submit" class="btn btn-danger">Buy</button>
-            </div>
-          </div>
-
         </div>
-
-      </div>
-    </section><!-- End Portfolio Details Section -->
-
-  </main><!-- End #main -->
+    </div>
+    </div>
+  </section><!-- End Hero -->
 
   <!-- ======= Footer ======= -->
   <footer id="footer">
@@ -198,10 +194,15 @@
   <script src="/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="/vendor/swiper/swiper-bundle.min.js"></script>
-  
+  <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
   <!-- Template Main JS File -->
   <script src="/js/main.js"></script>
+ 
+  <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+  <script src="/vendor/bootstrap/js/bootstrap.bundle.js"></script>
+  <script src="/vendor/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://kit.fontawesome.com/5e4d1f0e4e.js" crossorigin="anonymous"></script>
 
 </body>
-
 </html>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
@@ -50,14 +50,14 @@
 
       <h1 class="logo"><a href="index.html">Dphone Enterprises</a></h1>
       <!-- Kept it here if we may want to switch to an image logo from the text Logo -->
-      <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      <!-- <a href="index.html" class="logo"><img src="/img/logo.png" alt="" class="img-fluid"></a>-->
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto active" href="/user">Home</a></li>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
           <li><a class="nav-link scrollto" href="#about">About</a></li>
           <li><a class="nav-link scrollto" href="#team">Team</a></li>
-          <li><a class="nav-link scrollto" href="#">Referral</a></li>
+          <li><a class="nav-link scrollto" href="#team">Referral</a></li>
           <li>
             <div class="dropdown">
                 <a class=" dropdown-toggle" id="menu1" data-toggle="dropdown">Username  <box-icon class="mx-4" type='solid' name='user'></box-icon></a>
@@ -89,9 +89,9 @@
                             <thead>
                                 <tr>
                                     <th scope="col">#</th>
-                                    <th scope="col">Name</th>
-                                    <th scope="col">Status</th>
-                                    <th scope="col">Code</th>
+                                    <th scope="col">First</th>
+                                    <th scope="col">Last</th>
+                                    <th scope="col">Handle</th>
                                     <th scope="col"></th>
                                 </tr>
                             </thead>
@@ -99,14 +99,11 @@
                                 <tr>
                                     <th scope="row">1</th>
                                     <td>Mark</td>
-                                    <td>Active</td>
-                                    <td>dhahhasbc-uy787jhabvcx-7y78cabhj0-hdih</td>
+                                    <td>Otto</td>
+                                    <td>@mdo</td>
                                     <td>
                                         <!-- Call to action buttons -->
                                         <ul class="list-inline m-0">
-                                            <li class="list-inline-item">
-                                                <button class="btn btn-primary btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="Add"><i class="fa fa-table"></i></button>
-                                            </li>
                                             <li class="list-inline-item">
                                                 <button class="btn btn-success btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-edit"></i></button>
                                             </li>
@@ -116,10 +113,9 @@
                                         </ul>
                                     </td>
                                 </tr>
-                                
                             </tbody>
                         </table>
-
+                        <a href="create-referral.html"><button type="button" class="btn btn-outline-danger">Create Referral</button></a>
                     </div>
                 </div>
             </div>
@@ -192,13 +188,14 @@
   <script src="/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="/js/main.js"></script>
  
   <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
   <script src="/vendor/bootstrap/js/bootstrap.bundle.js"></script>
   <script src="/vendor/jquery-3.3.1.slim.min.js"></script>
   <script src="https://kit.fontawesome.com/5e4d1f0e4e.js" crossorigin="anonymous"></script>
-
-  <!-- Template Main JS File -->
-  <script src="/js/main.js"></script>
 </body>
 </html>
