@@ -1,0 +1,37 @@
+server:
+  port: 8000
+
+spring:
+  application:
+    name: API-GATEWAY
+  cloud:
+    gateway:
+      routes:
+        #User Service
+        - id: DPHONE-USER-SERVICE
+          uri: lb://DPHONE-USER-SERVICE
+          predicates:
+            - Path=/user/**
+        #Customer Service
+        - id: DPHONE-CUSTOMER-SERVICE
+          uri: lb://DPHONE-CUSTOMER-SERVICE
+          predicates:
+            - Path=/customer/**
+        #Buying Details Service
+        - id: DPHONE-PRODUCT-SERVICE
+          uri: lb://DPHONE-PRODUCT-SERVICE
+          predicates: 
+            - Path=/buyingdetail/**
+        #Referral Service
+        - id: DPHONE-REFERRAL-SERVICE
+          uri: lb://DPHONE-REFERRAL-SERVICE
+          predicates:
+            - Path=/referral/**
+
+
+
+
+eureka:
+  client:
+    service-url:
+       defaultZone: http://localhost:8761/eureka
