@@ -1,6 +1,0 @@
-server:
-  port: 8200
-
-spring:
-  application:
-    name: WEB-APPLICATION
