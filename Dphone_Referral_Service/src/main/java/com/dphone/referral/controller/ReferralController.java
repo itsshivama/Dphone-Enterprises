@@ -55,5 +55,10 @@ public class ReferralController {
 		return new ResponseEntity<List<ReferralBean>>(referralBeans, HttpStatus.OK);
 	}
 	
+	@RequestMapping(value = "/{referralCode}/validate", method = RequestMethod.GET)
+	public ResponseEntity<Boolean> isValidReferral(@PathVariable("referralCode") String referralCode) {
+		Boolean validStatus = referralServiceImpl.isValidReferral(referralCode);
+		return new ResponseEntity<Boolean>(validStatus, HttpStatus.OK);
+	}
 }
 

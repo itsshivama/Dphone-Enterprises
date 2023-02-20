@@ -14,6 +14,9 @@ public interface ReferralDao extends JpaRepository<ReferralEntity, Integer>{
 	@Query("SELECT r from ReferralEntity r")
 	List<ReferralEntity> getAllReferrals();
 
+	@Query("SELECT CASE WHEN COUNT(*)>0 THEN TRUE ELSE FALSE END FROM ReferralEntity r WHERE r.referral_code = ?1")
+	Boolean isValidReferral(String referralCode);
+
 
 //	@Query("select referralEntity from ReferralEntity where referral.userId=?1")
 //	List<ReferralEntity> userReferralList(int userId);

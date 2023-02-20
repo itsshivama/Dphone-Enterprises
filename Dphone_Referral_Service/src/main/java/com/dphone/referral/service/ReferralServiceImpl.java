@@ -150,4 +150,16 @@ public class ReferralServiceImpl implements ReferralService{
 		
 	}
 
+	@Override
+	public Boolean isValidReferral(String referralCode) {
+		// TODO Auto-generated method stub
+		try {
+			Boolean validStatus = referralDao.isValidReferral(referralCode);
+			return validStatus;
+		} catch (Exception e) {
+			// TODO: handle exception
+			return false;
+		}
+	}
+
 }

@@ -19,4 +19,6 @@ public interface ReferralService {
 	 boolean updateReferral(ReferralBean referralBean);
 	 
 	 double redeemReferral(String referralCode, String firstName, String LastName);
+	 
+	 Boolean isValidReferral(String referralCode);
 }
