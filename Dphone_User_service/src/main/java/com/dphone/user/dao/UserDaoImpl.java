@@ -154,16 +154,19 @@ public class UserDaoImpl {
 		// TODO Auto-generated method stub
 		try {
 			int userId = userdao.getUserId(username);
-			
 			UserEntity userEntity = userdao.getReferenceById(userId);
+			
+			List<ReferralBean> referralBeans = referralService.viewReferral(userId).getBody();
+			userEntity.setReferralBeans(referralBeans);
+			
 			UserBean userBean = new UserBean();
 			BeanUtils.copyProperties(userEntity, userBean);
-			
 			return userBean;
+			
 		} catch (Exception e) {
 			// TODO: handle exception
 			return null;
-		}
+		}	
 	}
 
 	/*

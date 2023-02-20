@@ -109,7 +109,45 @@ public class ReferralServiceImpl implements ReferralService{
 	@Override
 	public List<ReferralBean> viewReferral(int userId) {
 		// TODO Auto-generated method stub
-		return null;
+		try {
+			List<ReferralBean> referralBeans = new ArrayList<>();
+			List<ReferralEntity> referralEntities = referralDao.getByUserId(userId);
+			
+			for (ReferralEntity entity : referralEntities) {
+				ReferralBean bean = new ReferralBean();
+				BeanUtils.copyProperties(entity, bean);
+				
+				referralBeans.add(bean);
+			}
+			
+			return referralBeans;
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+			return null;
+		}
+	}
+
+	public List<ReferralBean> viewAllReferral() {
+		// TODO Auto-generated method stub
+		try {
+			List<ReferralBean> referralBeans = new ArrayList<>();
+			List<ReferralEntity> referralEntities = referralDao.getAllReferrals();
+			
+			for (ReferralEntity entity : referralEntities) {
+				ReferralBean bean = new ReferralBean();
+				BeanUtils.copyProperties(entity, bean);
+				
+				referralBeans.add(bean);
+			}
+			
+			return referralBeans;
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+			return null;
+		}
+		
 	}
 
 }

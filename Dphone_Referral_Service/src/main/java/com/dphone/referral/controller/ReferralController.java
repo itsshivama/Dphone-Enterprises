@@ -23,8 +23,8 @@ public class ReferralController {
 		return new ResponseEntity<Boolean>(status, HttpStatus.OK);
 	}
 	
-	@RequestMapping(value="/list", method=RequestMethod.GET)
-	public ResponseEntity<List<ReferralBean>> viewReferral(@PathVariable int userId){
+	@RequestMapping(value="/list/{userId}", method=RequestMethod.GET)
+	public ResponseEntity<List<ReferralBean>> viewReferral(@PathVariable("userId") int userId){
 		List<ReferralBean> list = referralServiceImpl.viewReferral(userId);
 		
 		if(list.isEmpty()) return new ResponseEntity<List<ReferralBean>>(list, HttpStatus.BAD_REQUEST);
@@ -47,6 +47,12 @@ public class ReferralController {
 		boolean status = referralServiceImpl.updateReferral(referralBean);
 		return new ResponseEntity<Boolean>(status, HttpStatus.OK);
 		
+	}
+	
+	@RequestMapping(value = "/show-all-referrals", method = RequestMethod.GET)
+	public ResponseEntity<List<ReferralBean>> viewAllReferral() {
+		List<ReferralBean> referralBeans = referralServiceImpl.viewAllReferral();
+		return new ResponseEntity<List<ReferralBean>>(referralBeans, HttpStatus.OK);
 	}
 	
 }

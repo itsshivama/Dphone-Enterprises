@@ -8,6 +8,12 @@ import com.dphone.referral.entity.ReferralEntity;
 
 public interface ReferralDao extends JpaRepository<ReferralEntity, Integer>{
 
+	@Query("SELECT r FROM ReferralEntity r WHERE r.userId = ?1")
+	List<ReferralEntity> getByUserId(int userId);
+
+	@Query("SELECT r from ReferralEntity r")
+	List<ReferralEntity> getAllReferrals();
+
 
 //	@Query("select referralEntity from ReferralEntity where referral.userId=?1")
 //	List<ReferralEntity> userReferralList(int userId);
