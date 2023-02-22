@@ -73,10 +73,10 @@ public class CustomerController{
 		return new ResponseEntity<Boolean>(status,HttpStatus.OK);
 	}
 	
-	@GetMapping("/404")
-	public ModelAndView buyinDetailAddProductFallBack() {
-		ModelAndView mv = new ModelAndView("404.html");
-		return mv;
+	
+	public ResponseEntity<Boolean>buyinDetailAddProductFallBack(BuyingDetailsBean buyingDetailsBean,Exception ex) {
+		
+		return new ResponseEntity<Boolean>(false,HttpStatus.OK);
 		
 	}
 	

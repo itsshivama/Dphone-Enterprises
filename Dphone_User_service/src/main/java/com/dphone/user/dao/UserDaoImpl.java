@@ -31,6 +31,7 @@ public class UserDaoImpl {
 		try {
 			UserEntity userEntity = new UserEntity();
 			BeanUtils.copyProperties(userBean, userEntity);
+			
 			userdao.save(userEntity);
 			
 			userEntity = userdao.getReferenceById(userdao.getUserId(userBean.getUsername()));
@@ -68,7 +69,7 @@ public class UserDaoImpl {
 		}
 	}
 
-	@SuppressWarnings("unchecked")
+	//@SuppressWarnings("unchecked")
 	public UserBean showUserInfo(String username) {
 		// TODO Auto-generated method stub
 		try {

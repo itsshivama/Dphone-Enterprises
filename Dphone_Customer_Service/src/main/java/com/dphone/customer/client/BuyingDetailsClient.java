@@ -9,7 +9,7 @@ import com.dphone.customer.bean.BuyingDetailsBean;
 
 
 
-@FeignClient(url = "http://localhost:8084/product", name = "BUYING-DETAIL-SERVICE")
+@FeignClient(url = "http://localhost:8000/buyingdetail", name = "BUYING-DETAIL-SERVICE")
 public interface BuyingDetailsClient {
 
 	@PostMapping(value = "/addbuyingdetail")
